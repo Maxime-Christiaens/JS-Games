@@ -1,0 +1,69 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.red {
+  background-color: #c4042c;
+  color: white;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+.Page {
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.Page h2 {
+  margin-top: 5vh;
+  font-size: 121px;
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.Page h3 {
+  font-size: 60px;
+  margin-top: 150px;
+}
+
+.Page p {
+  padding: 100px 0 75px 0;
+  font-size: 100px;
+}
+
+.Page #cookie:active {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.Page button {
+  border-radius: 15px;
+  border: white 5px solid;
+  color: #c4042c;
+  background-color: white;
+  padding: 10px;
+}
+
+.Page button:hover {
+  color: white;
+  background-color: #c4042c;
+}
+
+.Page .instal {
+  margin-bottom: 100px;
+}
+/*# sourceMappingURL=style.css.map */
