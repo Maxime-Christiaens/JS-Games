@@ -10,7 +10,7 @@ let AutoClickBonus = 0;
 //bonus de base à + 0 logique
 let Bonus30 = 0;
 //0 car le bonus va être à 1 et donc doubler la valeur de base qui est 1
-let Bonus30Price = 500; 
+let Bonus30Price = 10; 
 //Prix de base pour l'achat du bonus
 let BonusTimer = 0; 
 let DoIt = false;
@@ -61,7 +61,7 @@ bonus.addEventListener("click", function(){
         DoIt = true;
         if (DoIt){
             setInterval(function(){
-                if (BonusTimer < 5 && DoIt){
+                if (BonusTimer < 30 && DoIt){
                     BonusTimer += 1;           
                     bonus.innerHTML = BonusTimer;
                     bonus.innerHTML = "Bonus * 2 activé "+BonusTimer;
@@ -84,7 +84,6 @@ multi.addEventListener("click", function(){
         score -= multiPrice;
         multiPrice *= 2;
         multi.innerHTML = "Multiplicateur +"+multiplicateur+" Prochaine niveau accessible pour "+multiPrice+" cookies";    
-        return  multiplicateur;
     }
 });
 //autoCliqueur
@@ -99,7 +98,6 @@ autoC.addEventListener("click", function(){
             autoC.disabled = true;
             multi.disabled = true;
             //désactive le bouton multi 
-            return score;
         } 
         else if (autoClick == 1 && autoClikActivation){
             //pendant 0.5 s ne fait rien puis switch en autoClick = 0 ce qui relance le click auto pendant 0.5s donc ça fait 1 click par seconde
@@ -117,7 +115,7 @@ autoC.addEventListener("click", function(){
 });
 //bonus de l'auto-cliqueur
 autoBonus.addEventListener("click", function(){
-    if(autoClikActivation && score >= BonusAutoSeuil && AutoClickBonus == 0){
+    if(autoClikActivation && score >= BonusAutoSeuil && AutoClickBonus >= 0){
         score -= BonusAutoSeuil;
         AutoClickBonus += 1;
         BonusAutoSeuil *= 2; 
@@ -125,14 +123,6 @@ autoBonus.addEventListener("click", function(){
         //autoBonus.disabled = false;
         //active le bouton
         autoC.innerHTML = ("Auto-Clik Activé level "+(1+AutoClickBonus));
-        autoBonus.innerHTML =("Prochain bonus de click pour "+BonusAutoSeuil+" cookies");
-    }
-    else if(autoClikActivation && score >= BonusAutoSeuil && AutoClickBonus > 0){
-        score -= BonusAutoSeuil;
-        AutoClickBonus += 1;
-        BonusAutoSeuil *= 2; 
-        //augmentation du seuil du bonus * 2 
-        autoC.innerHTML = ("Auto-Clik Activé level "(1+AutoClickBonus));
         autoBonus.innerHTML =("Prochain bonus de click pour "+BonusAutoSeuil+" cookies");
     }
 });
