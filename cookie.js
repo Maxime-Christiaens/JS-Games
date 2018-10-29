@@ -10,7 +10,7 @@ let AutoClickBonus = 0;
 //bonus de base à + 0 logique
 let Bonus30 = 0;
 //0 car le bonus va être à 1 et donc doubler la valeur de base qui est 1
-let Bonus30Price = 10; 
+let Bonus30Price = 500; 
 //Prix de base pour l'achat du bonus
 let BonusTimer = 0; 
 let DoIt = false;
