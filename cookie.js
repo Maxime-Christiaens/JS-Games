@@ -34,6 +34,7 @@ cookie.addEventListener("click", function(){
         //affiche le score sur le p dans le hmtl 
     }
     //Activation / désactivation des boutons
+    /*
     if (score < multiPrice){
         multi.disabled = true;
     }
@@ -41,6 +42,7 @@ cookie.addEventListener("click", function(){
         multi.disabled = false;
         //active le bouton multi
     } 
+    */
     if(score > ActivationSeuil && autoClikActivation == false){
         autoC.disabled = false;
     }
@@ -96,7 +98,7 @@ autoC.addEventListener("click", function(){
             //affiche le score sur le p dans le hmtl
             autoClick = 1;
             autoC.disabled = true;
-            multi.disabled = true;
+            //multi.disabled = true;
             //désactive le bouton multi 
         } 
         else if (autoClick == 1 && autoClikActivation){
@@ -106,7 +108,7 @@ autoC.addEventListener("click", function(){
         else if (score >= ActivationSeuil && autoClikActivation == false){
             score -= ActivationSeuil;
             autoClikActivation = true;
-            multi.disabled = false;
+            //multi.disabled = false;
             autoC.innerHTML = "Auto-Clik Activé level 1";
             //active le bouton
         }
