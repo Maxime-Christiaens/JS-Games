@@ -25,6 +25,12 @@
   height: 100vh;
 }
 
+@media (max-width: 992px) {
+  .Page {
+    height: 100%;
+  }
+}
+
 .Page h2 {
   margin-top: 5vh;
   font-size: 10vh;

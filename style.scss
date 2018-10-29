@@ -21,6 +21,9 @@
 .Page {
     padding-top:50px;
     height:100vh;
+    @media (max-width: 992px){
+        height: 100%;
+    }
     h2{
         margin-top: 5vh;
         //font-size: 121px;
