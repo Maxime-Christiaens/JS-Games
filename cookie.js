@@ -60,6 +60,7 @@ bonus.addEventListener("click", function(){
     if (score >= Bonus30Price && BonusTimer <= 30){
         score -=  Bonus30Price;
         Bonus30 = 1;
+        BonusTimer = 0;
         DoIt = true;
         if (DoIt){
             setInterval(function(){
