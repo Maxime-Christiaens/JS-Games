@@ -70,11 +70,21 @@
 }
 
 .Page .row.arrayImgs1 div {
-  background-color: #c4042c;
+  width: 150px;
+  height: 150px;
+  background-image: url("imgs/cookie.png");
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
   border: 1px blue solid;
 }
 
 .Page .row.arrayImgs1 div .imgsPaire {
+  width: 150px;
+  height: 150px;
   opacity: 0;
   /*&:hover{
                     transform : scale(1.2);
