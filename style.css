@@ -70,30 +70,19 @@
 }
 
 .Page .row.arrayImgs1 div {
-  position: relative;
-  z-index: 9999;
-  border: 1px solid red;
   background-color: #c4042c;
+  border: 1px blue solid;
 }
 
 .Page .row.arrayImgs1 div .imgsPaire {
-  position: relative;
-  z-index: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.Page .row.arrayImgs1 div .imgsPaire:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  opacity: 0;
+  /*&:hover{
+                    transform : scale(1.2);
+                    transition: all 0.3s ease;
+                }*/
 }
 
 .Page .row.arrayImgs1 div .imgsPaire:active {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

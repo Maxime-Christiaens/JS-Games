@@ -33,8 +33,8 @@ PairesDiv.addEventListener('click', function (event) {
         if (clicked.nodeName === 'DIV') { return; }
         if (clicked.src == clickedBis.src && clicked != clickedBis){
             console.log("Mais oui, c'est ça !");
-            document.getElementById(clicked.id).style.opacity = "0";
-            document.getElementById(clickedBis.id).style.opacity = "0";
+            document.getElementById(clicked.id).style.opacity = "1";
+            document.getElementById(clickedBis.id).style.opacity = "1";
             clickedBis = null;
             //vide la variable
             clicked = null;
