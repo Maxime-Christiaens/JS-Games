@@ -5,7 +5,9 @@
 .navbar{
     background-color: black;
     .nav-link{
-        color: white;
+        a{
+            color: white;
+        }
     }
 }
 //style 1

@@ -73,7 +73,7 @@ bonus.addEventListener("click", function(){
                     Bonus30 = 0; 
                     BonusTimer = 0;
                     Bonus30Price *= 2;
-                    bonus.innerHTML = Bonus30Price+" cookies pour obtenir cookies *2 sur 30 sec !";
+                    bonus.innerHTML = Bonus30Price+" cookies = *2 pendant 30 sec !";
                     DoIt = false;
                 }
             }, 1000);
@@ -86,7 +86,7 @@ multi.addEventListener("click", function(){
         multiplicateur += 1;
         score -= multiPrice;
         multiPrice *= 2;
-        multi.innerHTML = "Multiplicateur +"+multiplicateur+" Prochaine niveau accessible pour "+multiPrice+" cookies";    
+        multi.innerHTML = "Multiplicateur +"+multiplicateur+" Prochaine niveau pour "+multiPrice+" cookies";    
     }
 });
 //autoCliqueur
