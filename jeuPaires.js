@@ -23,6 +23,7 @@ const PairesDiv = document.getElementById("GamePaires");
 
 let clicked = null;
 let clickedBis = null;
+let paire = 0;
 
 PairesDiv.addEventListener('click', function (event) {
     if (clicked != null && clickedBis == null){
@@ -32,13 +33,17 @@ PairesDiv.addEventListener('click', function (event) {
         // Do not allow the grid section itself to be selected; only select divs inside the grid
         if (clicked.nodeName === 'DIV') { return; }
         if (clicked.src == clickedBis.src && clicked != clickedBis){
-            console.log("Mais oui, c'est ça !");
+            alert("Mais oui, c'est ça !");
             document.getElementById(clicked.id).style.opacity = "1";
             document.getElementById(clickedBis.id).style.opacity = "1";
             clickedBis = null;
             //vide la variable
             clicked = null;
             //vide la variable et permet de rentrer de nouveau dans la première condition
+            paire += 1;
+            if (paire = 7){
+                alert("Tu as trouvé toutes les paires, bien joué Billy")
+            }
         }
         else{
             clickedBis = null;

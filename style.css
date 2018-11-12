@@ -69,6 +69,67 @@
   background-color: #c4042c;
 }
 
+@-webkit-keyframes tourne {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes tourne {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+.Page .flip {
+  -webkit-animation-name: tourne;
+          animation-name: tourne;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
 .Page .row.arrayImgs1 div {
   width: 150px;
   height: 150px;
@@ -79,7 +140,6 @@
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-  border: 1px blue solid;
 }
 
 .Page .row.arrayImgs1 div .imgsPaire {
@@ -90,9 +150,5 @@
                     transform : scale(1.2);
                     transition: all 0.3s ease;
                 }*/
-}
-
-.Page .row.arrayImgs1 div .imgsPaire:active {
-  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
