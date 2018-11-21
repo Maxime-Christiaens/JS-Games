@@ -12,11 +12,8 @@ $(function () {//permet d'exécuter le code quand toute la page est 100% chargé
     $(".imgsPaireDIV").click(function (event) {
         let CA = event.target;//récupére l'info du click
         $(CA).parent().toggleClass("flip");//donne à la div de l'image la class flip
-        let CAID = CA.id;
-        console.log(CAID);
-        //$(`#${CAID}`).delay(200).fadeIn();//passe l'opacité à 1 (fadeIn()) en 200 ms pour l'objet contenu dans Cécile
-        document.getElementById(CAID).style.opacity = "1";
-        //$("#img0").delay(200).fadeIn();
+        //$(CA).parent().delay(200).addClass("begone");
+        $(CA).delay(200).toggleClass("show");
     });
 })
 
