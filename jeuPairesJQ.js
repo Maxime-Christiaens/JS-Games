@@ -10,14 +10,15 @@ $(function () {//permet d'exécuter le code quand toute la page est 100% chargé
     //attribution aléatoire des images
 
     $(".imgsPaireDIV").click(function (event) {
-        let clicked = event.target;
-
-        
-        //pour la rotation stylé LOL
-
-        document.getElementById(clicked.id).style.opacity = "1";
+        let CA = event.target;//récupére l'info du click
+        $(CA).parent().toggleClass("flip");//donne à la div de l'image la class flip
+        let CAID = CA.id;
+        console.log(CAID);
+        //$(`#${CAID}`).delay(200).fadeIn();//passe l'opacité à 1 (fadeIn()) en 200 ms pour l'objet contenu dans Cécile
+        document.getElementById(CAID).style.opacity = "1";
+        //$("#img0").delay(200).fadeIn();
     });
 })
 
 //document.getElementById(clicked.id)
-//
+//test
