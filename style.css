@@ -208,6 +208,8 @@
 .Page .row.arrayImgs1 div {
   width: 150px;
   height: 150px;
+  position: relative;
+  z-index: 9999;
   background-image: url("imgs/cookie.png");
   background-position: center;
   /* Center the image */
@@ -220,7 +222,7 @@
 .Page .row.arrayImgs1 div .imgsPaire {
   width: 150px;
   height: 150px;
-  opacity: 0;
+  opacity: 1;
   /*&:hover{
                     transform : scale(1.2);
                     transition: all 0.3s ease;
