@@ -1,110 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>GamesJS</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>GamesJS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-sm fixed-top" id="navbar">
-                <!-- Links -->
+        <!-- Links -->
         <ul class="navbar-nav row">
             <li class="nav-item">
                 <a class="nav-link" href="#section0">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"href="#section1">Cookie Clicker</a>
+                <a class="nav-link" href="#section1">Cookie Clicker</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"href="#section2">Jeu des paires</a>
+                <a class="nav-link" href="#section2">Jeu des paires</a>
             </li>
-        </ul>           
+        </ul>
     </nav>
-    <div id="section0" class="container-fluid Page white">
-        <div class="container-fluid">   
+    <div id="section0" class="container-fluid Page white landingPage">
+        <div class="container-fluid">
             <div class="row text-center white">
-                <h2 class="col-lg-12 titre">Accueil</h2>
+                <h2 class="col-lg-12 titre animated fadeInDown">Acceuil</h2>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="row col-sd-12 col-md-6 justify-content-center">
+                            <h3 class="animated fadeInLeft delay-1s">
+                                <a class="nav-link" href="#section1">Cookie Clicker</a>
+                            </h3>
+                        </div>
+                        <div class="row col-sd-12 col-md-6 justify-content-center">
+                            <h3 class="animated fadeInRight delay-1s">
+                                <a class="nav-link" href="#section2">Jeu des paires</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
                 <img src="imgs/logo.png" alt="">
             </div>
         </div>
     </div>
     <div id="section1" class="container-fluid Page red">
-        <div class="container-fluid">   
+        <div class="container-fluid">
             <div class="row text-center">
                 <h2 class="col-lg-12 titre">Cookie Clicker</h2>
                 <p class="col-lg-12 cookie" id="score">0</p>
                 <img id="cookie" class="col-lg-2 offset-lg-5 col-md-4 offset-md-4" src="imgs/cookie.png" alt="">
                 <div class="col-lg-12">
                     <button id="Bonus" class="col-lg-2 col-md-12">Pour 500 cookies, Multiplicateur *2 pour 30 sec !</button>
-                    <button id="multi" class="col-lg-2 col-md-12" >Multiplicateur +1 pour 50 cookies</button>
-                    <button id="autoC" class="col-lg-2 offset-lg-1 col-md-12" disabled>Pour 200 cookies un auto-Cliqueur</button>
-                    <button id="autoBonus" class="col-lg-2 col-md-12" >Bonus +1 pour l'auto-click pour 300 cookies</button>
+                    <button id="multi" class="col-lg-2 col-md-12">Multiplicateur +1 pour 50 cookies</button>
+                    <button id="autoC" class="col-lg-2 offset-lg-1 col-md-12" disabled>Pour 200 cookies un
+                        auto-Cliqueur</button>
+                    <button id="autoBonus" class="col-lg-2 col-md-12">Bonus +1 pour l'auto-click pour 300 cookies</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="section2" class="container-fluid Page white">
         <div id="GamePaires" class="container-fluid text-center">
-                <h2 class="col-lg-12 titre">Jeu des paires</h2>   
+            <h2 class="col-lg-12 titre">Jeu des paires</h2>
             <div class="row d-flex justify-content-center arrayImgs1">
-                <div class="imgsPaireDIV" id="imgsPaireDIV0">
-                    <img class="imgsPaire" id="img0" src="imgs/anehihan.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV1">
-                    <img class="imgsPaire" id="img1" src="imgs/chatminou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV2">
-                    <img class="imgsPaire" id="img2" src="imgs/chientoutou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV3">
-                    <img class="imgsPaire" id="img3" src="imgs/lamacrachat.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV4">
-                    <img class="imgsPaire" id="img4" src="imgs/lapinscrottes.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV5">
-                    <img class="imgsPaire" id="img5" src="imgs/lionnegraou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV6">
-                    <img class="imgsPaire" id="img6" src="imgs/oursbaby.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV7">
-                    <img class="imgsPaire" id="img7" src="imgs/anehihan.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV8">
-                    <img class="imgsPaire" id="img8" src="imgs/chatminou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV9">
-                    <img class="imgsPaire" id="img9" src="imgs/chientoutou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV10">
-                    <img class="imgsPaire" id="img10" src="imgs/lamacrachat.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV11">
-                    <img class="imgsPaire" id="img11" src="imgs/lapinscrottes.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV12">
-                    <img class="imgsPaire" id="img12" src="imgs/lionnegraou.jpg" alt="">
-                </div>
-                <div class="imgsPaireDIV" id="imgsPaireDIV13">
-                    <img class="imgsPaire" id="img13" src="imgs/oursbaby.jpg" alt="">
-                </div>
+
             </div>
         </div>
     </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<!--JS-->
-<script src="smooth.js"></script>
-<script src="cookie.js"></script>
-<script src="jeuPairesJQ.js"></script>
-<script src="challenge.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--JS-->
+    <script src="smooth.js"></script>
+    <script src="cookie.js"></script>
+    <script src="jeuPairesJQ.js"></script>
+    <script src="challenge.js"></script>
 </body>
+
 </html>
