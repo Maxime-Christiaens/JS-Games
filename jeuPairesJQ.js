@@ -4,19 +4,28 @@ $(function () {//permet d'exécuter le code quand toute la page est 100% chargé
     ListeImgs.sort(() => 0.5 - Math.random());
     //randomise la liste
 
-    for (let i=0; i<14; i++){
-        $("#img"+i).attr("src",ListeImgs[i]);
-    }    
+    for (let i = 0; i < 14; i++) {
+        $("#img" + i).attr("src", ListeImgs[i]);
+    }
     //attribution aléatoire des images
 
-    $(".imgsPaireDIV").click(function (event) {
-        let CA = event.target;//récupére l'info du click
-        /*
-        $(CA).parent().toggleClass("flip");//donne à la div de l'image la class flip
-        //$(CA).parent().delay(200).addClass("begone");
-        $(CA).delay(200).toggleClass("show");
-        */
-    });
+    /*     $(".imgsPaireDIV").click(function (event) {
+            let CA = event.target;//récupére l'info du click
+            
+            $(CA).parent().toggleClass("flip");//active la classe flip
+            //$(CA).parent().delay(200).addClass("begone");
+            $(CA).delay(200).toggleClass("show");
+            
+        }); */
+
+    $(".Jpaires").click(function (event) {
+        $(".Jpaires").toggleClass("flip");
+        $('.Jpaires')
+            .delay(200)
+            .queue(function (next) {
+                $(".Jpaires").css("background-image", "url(imgs/anehihan.jpg)");
+            });
+});
 })
 
 //document.getElementById(clicked.id)

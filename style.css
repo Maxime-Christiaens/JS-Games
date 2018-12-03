@@ -25,16 +25,17 @@
   height: 100vh;
 }
 
-.Page .nav-link {
-  color: black !important;
-  border: 3px black solid;
-  border-radius: 15px;
-}
-
 @media (max-width: 992px) {
   .Page {
     height: 100%;
   }
+}
+
+.Page .nav-link {
+  color: black !important;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 15px;
 }
 
 .Page h2 {
@@ -87,7 +88,6 @@
   50% {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
-    opacity: 0;
   }
   75% {
     -webkit-transform: rotateY(45deg);
@@ -111,7 +111,6 @@
   50% {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
-    opacity: 0;
   }
   75% {
     -webkit-transform: rotateY(45deg);
@@ -128,16 +127,13 @@
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
   }
-  45% {
-    opacity: 0.9;
-  }
   50% {
-    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
   100% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 0;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
 }
 
@@ -146,58 +142,31 @@
     -webkit-transform: rotateY(0);
             transform: rotateY(0);
   }
-  45% {
-    opacity: 0.9;
-  }
   50% {
-    opacity: 0;
+    -webkit-transform: rotateY(-90deg);
+            transform: rotateY(-90deg);
   }
   100% {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    opacity: 0;
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
 }
 
 .Page .flip {
-  -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-          animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-}
-
-@-webkit-keyframes show {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 1;
-  }
-}
-
-@keyframes show {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 1;
-  }
+  -webkit-animation: flip-vertical-left 0.4s;
+          animation: flip-vertical-left 0.4s;
 }
 
 .Page .show {
-  -webkit-animation: show 0.4s ease-in;
-          animation: show 0.4s ease-in;
+  -webkit-animation: show 0.4s;
+          animation: show 0.4s;
 }
 
-.Page .row.arrayImgs1 div {
+.Page .row.arrayImgs div {
   width: 150px;
   height: 150px;
-  position: relative;
-  z-index: 9999;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
   background-image: url("imgs/cookie.png");
   background-position: center;
   /* Center the image */
@@ -205,23 +174,5 @@
   /* Do not repeat the image */
   background-size: cover;
   /* Resize the background image to cover the entire container */
-}
-
-.Page .row.arrayImgs1 div .imgsPaire {
-  width: 150px;
-  height: 150px;
-  opacity: 1;
-  /*&:hover{
-                    transform : scale(1.2);
-                    transition: all 0.3s ease;
-                }*/
-}
-
-.begone {
-  opacity: 0;
-}
-
-.shows {
-  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
